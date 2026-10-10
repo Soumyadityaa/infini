@@ -1,0 +1,185 @@
+/* GALLERY HERO SECTION */
+.gallery-hero {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    text-align: center;
+    padding: 4rem 1.5rem;
+    background-image: linear-gradient(135deg, var(--primary-color) 0%, #1a3c7a 100%);
+}
+
+.gallery-hero h1 {
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+}
+
+.gallery-hero p {
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto;
+    opacity: 0.9;
+}
+
+/* GALLERY FILTERS */
+.gallery-filters {
+    padding: 3rem 1.5rem 1rem;
+    text-align: center;
+}
+
+.filter-btn-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.filter-btn {
+    padding: 0.6rem 1.5rem;
+    background-color: var(--card-bg);
+    border: 2px solid var(--border-color);
+    color: var(--text-color);
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+    border-color: var(--secondary-color);
+    color: var(--secondary-color);
+}
+
+.filter-btn.active {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    color: #ffffff;
+}
+
+[data-theme="dark"] .filter-btn {
+    background-color: var(--bg-color);
+}
+[data-theme="dark"] .filter-btn.active {
+    background-color: var(--secondary-color);
+}
+
+/* GALLERY GRID */
+.gallery-grid {
+    padding: 2rem 1.5rem 4rem;
+}
+
+.grid-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    /* This ensures layout animations remain relatively smooth */
+    align-items: start; 
+}
+
+.gallery-item {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: var(--card-bg);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    /* Transition for filtering script */
+    transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.gallery-item.hide {
+    display: none;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    min-height: 250px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+/* HOVER OVERLAY */
+.gallery-item .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(11, 32, 70, 0.85); /* Deep navy with opacity */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    padding: 1.5rem;
+    text-align: center;
+    color: #ffffff;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.08);
+}
+
+.gallery-item:hover .overlay {
+    opacity: 1;
+}
+
+.overlay svg {
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+    transform: translateY(20px);
+    transition: transform 0.3s ease;
+}
+
+.overlay p {
+    font-weight: 600;
+    font-size: 1.1rem;
+    transform: translateY(20px);
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover .overlay svg,
+.gallery-item:hover .overlay p {
+    transform: translateY(0);
+}
+
+/* CALL TO ACTION BANNER */
+.gallery-cta {
+    background-color: var(--secondary-color);
+    padding: 4rem 1.5rem;
+    text-align: center;
+    color: #ffffff;
+}
+
+.gallery-cta h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.cta-button-alt {
+    background-color: #ffffff;
+    color: var(--secondary-color);
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 4px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    display: inline-block;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.cta-button-alt:hover {
+    background-color: #f1f1f1;
+    transform: translateY(-2px);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .gallery-hero h1 {
+        font-size: 2.2rem;
+    }
+    
+    .grid-wrapper {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+}

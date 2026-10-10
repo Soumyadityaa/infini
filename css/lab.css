@@ -1,0 +1,191 @@
+/* LAB HERO SECTION */
+.lab-hero {
+    width: 100%;
+}
+
+.hero-media-placeholder {
+    width: 100%;
+    min-height: 60vh;
+    background-color: var(--primary-color);
+    background-image: linear-gradient(135deg, rgba(11, 32, 70, 0.9) 0%, rgba(11, 32, 70, 0.5) 100%), url('https://placehold.co/1920x1080/0B2046/FFFFFF?text=Dynamic+Laboratory+Environment');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #ffffff;
+    padding: 2rem;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    font-weight: 500;
+    opacity: 0.95;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+}
+
+/* CORE LAB PHILOSOPHY */
+.lab-features {
+    padding: 5rem 1.5rem;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+}
+
+.feature-block {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 3rem;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-block:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    border-color: var(--secondary-color);
+}
+
+.feature-icon {
+    color: var(--secondary-color);
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: center;
+}
+
+.feature-block h2 {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+[data-theme="dark"] .feature-block h2 {
+    color: var(--secondary-color);
+}
+
+.feature-block p {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+/* VIRTUAL TOUR / EQUIPMENT SHOWCASE */
+.virtual-tour {
+    background-color: var(--card-bg);
+    padding: 5rem 0;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.2rem;
+    color: var(--primary-color);
+    margin-bottom: 3rem;
+}
+
+[data-theme="dark"] .section-title {
+    color: #ffffff;
+}
+
+.tour-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.tour-card {
+    background-color: var(--bg-color);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border: 1px solid var(--border-color);
+    transition: transform 0.3s ease;
+}
+
+.tour-card:hover {
+    transform: scale(1.02);
+}
+
+.tour-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+    border-bottom: 3px solid var(--secondary-color);
+}
+
+.tour-caption {
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.tour-caption p {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+/* CALL TO ACTION BANNER */
+.lab-cta {
+    background-color: var(--secondary-color);
+    padding: 5rem 1.5rem;
+    text-align: center;
+    color: #ffffff;
+}
+
+.lab-cta h2 {
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+}
+
+.cta-button-alt {
+    background-color: #ffffff;
+    color: var(--secondary-color);
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 4px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    display: inline-block;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.cta-button-alt:hover {
+    background-color: #f1f1f1;
+    transform: translateY(-2px);
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 992px) {
+    .features-grid, .tour-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+    
+    .feature-block {
+        padding: 2rem;
+    }
+    
+    .tour-card img {
+        height: 250px;
+    }
+}

@@ -1,0 +1,191 @@
+/* HERO SECTION */
+.hero {
+    position: relative;
+    background-color: var(--primary-color);
+    background-image: linear-gradient(135deg, rgba(11, 32, 70, 0.9), rgba(11, 32, 70, 0.6));
+    /* Image placeholder can be set via background-url here */
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #ffffff;
+    padding: 2rem;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.cta-block {
+    margin: 2rem 0;
+}
+
+.cta-button {
+    background-color: var(--secondary-color);
+    color: #ffffff;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 4px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: inline-block;
+}
+
+.cta-button:hover {
+    background-color: #d1551a;
+    transform: translateY(-2px);
+}
+
+.contact-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 1rem;
+    color: #ffffff;
+}
+
+/* CORE PILLARS SECTION */
+.pillars {
+    padding: 4rem 0;
+    background-color: var(--bg-color);
+}
+
+.grid-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.pillar-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pillar-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    border-color: var(--secondary-color);
+}
+
+.icon-wrapper {
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.pillar-card h3 {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    margin-bottom: 0.75rem;
+}
+
+[data-theme="dark"] .pillar-card h3 {
+    color: var(--secondary-color);
+}
+
+.pillar-card p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+}
+
+/* OVERVIEW SECTION */
+.overview {
+    padding: 0 0 4rem 0;
+}
+
+.overview-banner {
+    background-color: var(--secondary-color);
+    color: #ffffff;
+    text-align: center;
+    padding: 1.5rem 1rem;
+    margin-bottom: 3rem;
+}
+
+.overview-banner h2 {
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+}
+
+.overview-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    text-align: center;
+}
+
+.grades-badge .highlight {
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--primary-color);
+    border-bottom: 4px solid var(--secondary-color);
+    padding-bottom: 0.5rem;
+}
+
+[data-theme="dark"] .grades-badge .highlight {
+    color: #ffffff;
+}
+
+.boards-section h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-muted);
+}
+
+.boards-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.board-badge {
+    color: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+[data-theme="dark"] .board-badge {
+    color: #ffffff;
+}
+
+/* RESPONSIVE DESIGN (INDEX SPECIFIC) */
+@media (max-width: 992px) {
+    .grid-4 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+    .contact-info {
+        flex-direction: column;
+        font-size: 1rem;
+    }
+    .grid-4 {
+        grid-template-columns: 1fr;
+    }
+}
